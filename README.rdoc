@@ -4,4 +4,4 @@ Using Rails 4.2.4
 
 ##Admin Interface
 
-Using [ActiveAdmin](https://github.com/activeadmin/activeadmin) 1.0.0.pre2
+Using [https://github.com/activeadmin/activeadmin](ActiveAdmin) 1.0.0.pre2
