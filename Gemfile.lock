@@ -198,7 +198,6 @@ DEPENDENCIES
   arbre (~> 1.0, >= 1.0.3)
   bourbon (~> 4.2, >= 4.2.6)
   byebug
-  coffee-rails (~> 4.1.0)
   devise (~> 3.5, >= 3.5.2)
   formtastic (~> 3.1, >= 3.1.3)
   inherited_resources (~> 1.6)
@@ -208,7 +207,6 @@ DEPENDENCIES
   rails (= 4.2.4)
   ransack (~> 1.7)
   sass (~> 3.4, >= 3.4.19)
-  sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
   sqlite3
