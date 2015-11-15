@@ -24,6 +24,8 @@ class StudentsController < ApplicationController
     @student = Student.new(student_params)
 
     if @student.save
+        teacher = Teacher.find(params["student"]["teacher"])
+        @student.teachers << teacher
         redirect_to @student, notice: 'Student was successfully created.'
     else
       render :new
@@ -33,6 +35,8 @@ class StudentsController < ApplicationController
   # PATCH/PUT /students/1
   def update
     if @student.update(student_params)
+      teacher = Teacher.find(params["student"]["teacher_id"])
+      @student.teachers << teacher
         redirect_to @student, notice: 'Student information was successfully updated.'
     else
       render :edit
@@ -42,7 +46,7 @@ class StudentsController < ApplicationController
   # DELETE /students/1
   def destroy
     @student.destroy
-    render :index, notice: 'Student was successfully deleted.'
+    redirect_to @students, notice: 'Student was successfully deleted.'
   end
 
   private

@@ -5,5 +5,16 @@
   <%= @teacher.first_name %> <%= @teacher.last_name  %>
 </p>
 
+<p>
+  <strong>Students:</strong>
+  <ul>
+    <% @teacher.students.each do |student| %>
+      <li>
+        <a href="<%= student_path(student.id) %>"><%= student.first_name %> <%= student.last_name %></a>
+      </li>
+    <% end %>
+  </ul>
+</p>
+
 <%= link_to 'Edit', edit_teacher_path(@teacher) %> |
-<%= link_to 'Back', teacher_path %>
+<%= link_to 'Back', teachers_path %>
