@@ -5,7 +5,7 @@ class CreateGuardians < ActiveRecord::Migration
       t.string :last_name
       t.string :email
 
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end
