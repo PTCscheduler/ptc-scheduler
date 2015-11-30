@@ -1,4 +1,5 @@
 class GuardiansController < ApplicationController
+before_action :set_guardian, only: [:show, :edit, :update, :destroy]
 
   # GET /guardians
   def index
@@ -49,9 +50,12 @@ class GuardiansController < ApplicationController
   end
 
   private
+  def set_guardian
+    @guardian = Guardian.find(params[:id])
+  end
 
-    def guardian_params
-      params.require(:guardian).permit(:first_name, :last_name, :email)
-    end
+  def guardian_params
+     params.require(:guardian).permit(:first_name, :last_name, :email)
+  end
 end
 
